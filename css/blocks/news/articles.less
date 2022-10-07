@@ -1,0 +1,84 @@
+// main: ../../style.less
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 -1.5rem;
+}
+
+.articles-col {
+    max-width: 33.3333%;
+    padding: 0 1.5rem;
+}
+
+.articles-item {
+    margin-bottom: 3.4rem;
+}
+
+.articles-header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.articles-content {
+    margin-bottom: 3rem;
+}
+
+.articles-date {
+    display: flex;
+
+    font-size: 1.6rem;
+    color: @white;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 77px;
+    height: 77px;
+    background-color: @black;
+    line-height: 1.3;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.articles-photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.item-title {
+    margin-bottom: 0.8rem;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: @black;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    } 
+}
+
+.item-category {
+    margin-bottom: 2.3rem;
+
+    font-size: 1.2rem;
+    color: @black;
+}
+
+.item-text {
+    color: @gray;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2;
+}

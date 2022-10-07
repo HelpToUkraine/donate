@@ -1,0 +1,59 @@
+// main: ../../style.less
+
+.about {
+    margin: 12.6rem 0;
+}
+
+.about-inner {
+    display: flex;
+    max-width: 1090px;
+}
+
+.about-photo, .about-content {
+    width: 50%;
+}
+
+.about-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: @black;
+}
+
+.about-bigtitle {
+    position: relative;
+    left: -10px;
+    
+    font-size: 9.1rem;
+    font-weight: 700;
+    color: fade(@black, 15%);
+}
+
+.about-text {
+    margin-bottom: 4rem;
+    line-height: 2rem;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: @gray
+}
+
+.about-content {
+    margin-top: 2.5rem ;
+    padding-left: 4.8rem;
+} 
+
+.about-photo {
+    position: relative;
+
+    &:before {
+        content: "";
+        background-color: #EFEFEF;
+        height: 413px;
+        width: 413px;
+
+        position: absolute;
+        left: 1.8rem;
+        bottom: 0;
+        z-index: -1;
+    }
+}
