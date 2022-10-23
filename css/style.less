@@ -9,6 +9,10 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +46,11 @@ p {
 @import "blocks/news/news";
 @import "blocks/news/articles";
 @import "blocks/footer/footer";
-
+@import "blocks/modal/modal";
+@import "blocks/modal/timeline";
+@import "blocks/modal/progress-barr";
+@import "blocks/modal/contact";
+@import "blocks/modal/contact-form";
 
 /* Helpers */
 @import "blocks/helper";

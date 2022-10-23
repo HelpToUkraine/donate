@@ -1,0 +1,85 @@
+// main: ../../style.less
+
+.timeline {
+    display: flex;
+    
+
+    margin: 6.3rem auto;
+    width: 100%;
+    max-width: 768px;
+    
+}
+
+.timeline_col {
+    width: 50%;
+
+    &--left {
+        border-right: 1px solid @gray;
+        padding-right: 4.8rem;
+        text-align: right;
+    }
+
+    &--right {
+        padding-left: 4.8rem;
+        text-align: left;
+    }
+}
+
+.timline_title {
+    margin-bottom: 4rem;
+
+    font-size: 1.8rem;
+    color: @black;
+    font-weight: 700;
+}
+
+.timline_item {
+    margin-bottom: 3.8rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.item_work-time {
+    margin-bottom: 1.7rem;
+    display: block;
+
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.item_job {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: @black;
+}
+
+.item_job-position {
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: @black;
+}
+
+.timeline_text {
+    margin-top: 1.4rem;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: @gray;
+    line-height: 1.5;
+    
+}
+
+.timline_inner {
+    display: flex;
+    justify-content: left;
+  
+    .item_work-time + .item_job{
+        padding-left: 2rem;
+    }
+}
