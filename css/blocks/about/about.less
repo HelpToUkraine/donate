@@ -1,16 +1,22 @@
 // main: ../../style.less
 
 .about {
-    margin: 12.6rem 0;
+    margin-top: 10.6rem;
+    padding-top: 2rem;
+    margin-bottom: 12.6rem;
 }
 
 .about-inner {
     display: flex;
+    align-items: flex-start;
     max-width: 1090px;
 }
 
-.about-photo, .about-content {
-    width: 50%;
+.about-photo {
+    width: 40%;
+}
+.about-content {
+    width: 60%;
 }
 
 .about-title {
@@ -38,22 +44,19 @@
 }
 
 .about-content {
-    margin-top: 2.5rem ;
+    padding-top: 2.5rem ;
     padding-left: 4.8rem;
 } 
 
 .about-photo {
     position: relative;
+}
 
-    &:before {
-        content: "";
-        background-color: #EFEFEF;
-        height: 413px;
-        width: 413px;
-
-        position: absolute;
-        left: 1.8rem;
-        bottom: 0;
-        z-index: -1;
-    }
+.img1 {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
 }

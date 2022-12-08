@@ -14,7 +14,7 @@
     <body>
 
         <!--Header-->
-        <header class="header" id="intro">
+        <header class="header">
             <div class="container">
                 <div class="header__inner">
 
@@ -29,11 +29,16 @@
                         </div>
                     </div>
 
+                    
+                    <div class="burger hide">
+                        <img class="burger_open" src="/images/social-gray/bars-solid.svg" alt="">
+                        <img class="burger_close hide" src="/images/ico/button-close.svg" alt="">
+                    </div>
+
                     <nav class="navigation">
 						<a class="navigation_link" href="#works">WORK</a>
 						<a class="navigation_link" href="#about">ABOUT ME</a>
 						<a class="navigation_link" href="#news">BLOG</a>
-						<a class="navigation_link" href="#">CONTACT</a>
                         <a class="navigation_link navigation_link--btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
 					</nav>
                 </div>
@@ -68,8 +73,10 @@
                         </a>
                     </div>
 
-                    <a class="btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
-                    <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME </button>
+                    <div class="buttons" style="margin-bottom: 3rem;">
+                        <a class="btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
+                        <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME </button>
+                    </div>
             
                 </div>
 
@@ -93,7 +100,7 @@
 
             <div class="portfolio">
             
-                <div class="portfolio_col" data-category="app" data-modal="#modal_project-calc">
+                <div class="portfolio_col" data-category="app" data-modal="#modal_project-calc" number="">
                     <div class="work">
                         <img class="work-image" src="images/projects/calc-min.jpg" alt="">
                         <div class="work-content">
@@ -106,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio_col" data-category="interaction" data-modal="#modal_project-auth">
+                <div class="portfolio_col" data-category="interaction" data-modal="#modal_project-auth" number="">
                     <div class="work">
                         <img class="work-image" src="images/projects/auth.jpg" alt="">
                         <div class="work-content">
@@ -119,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio_col" data-category="website" data-modal="#modal_project-portf">
+                <div class="portfolio_col" data-category="website" data-modal="#modal_project-portf" number="">
                     <div class="work">
                         <img class="work-image" src="images/projects/portfolio.jpg" alt="">
                         <div class="work-content">
@@ -132,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio_col" data-category="website" data-modal="#modal_project">
+                <div class="portfolio_col hide" data-category="website" data-modal="#modal_project" number="">
                     <div class="work">
                         <img class="work-image" src="images/main/square.svg" alt="">
                         <div class="work-content">
@@ -145,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio_col" data-category="interaction" data-modal="#modal_project">
+                <div class="portfolio_col hide" data-category="interaction" data-modal="#modal_project" number="">
                     <div class="work">
                         <img class="work-image" src="images/main/square.svg" alt="">
                         <div class="work-content">
@@ -158,7 +165,46 @@
                     </div>
                 </div>
 
-                <div class="portfolio_col" data-category="app" data-modal="#modal_project">
+                <div class="portfolio_col hide" data-category="app" data-modal="#modal_project" number="">
+                    <div class="work">
+                        <img class="work-image" src="images/main/square.svg" alt="">
+                        <div class="work-content">
+                            <div class="work-category">APP</div>
+                            <div class="work-title">
+                                Project title
+                                <time class="work-date">2022</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio_col hide" data-category="website" data-modal="#modal_project" number="">
+                    <div class="work">
+                        <img class="work-image" src="images/main/square.svg" alt="">
+                        <div class="work-content">
+                            <div class="work-category">WEBSITE</div>
+                            <div class="work-title">
+                                Project title
+                                <time class="work-date">2022</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio_col hide" data-category="interaction" data-modal="#modal_project" number="">
+                    <div class="work">
+                        <img class="work-image" src="images/main/square.svg" alt="">
+                        <div class="work-content">
+                            <div class="work-category">INTERACTION</div>
+                            <div class="work-title">
+                                Project title
+                                <time class="work-date">2022</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio_col hide" data-category="app" data-modal="#modal_project" number="">
                     <div class="work">
                         <img class="work-image" src="images/main/square.svg" alt="">
                         <div class="work-content">
@@ -174,7 +220,7 @@
             </div> <!--portfolio-->
 
             <div class="text-center" >
-                <a class="btn btn--sm" href="#" >LOAD MORE WORK</a>
+                <a class="btn btn--sm"  href="#works" data-load="" id="load">LOAD MORE WORK</a>
             </div >
             
         </div> <!--container-->
@@ -183,15 +229,16 @@
 
 
     <!--About-->
-    <section class="about" id="about">
+    <section class="about">
         <div class="container">
 
             <div class="about-inner">
                 <div class="about-photo">
                     <img class="img" src="images/main/designer.png" alt="" >
+                    <img class="img1" src="/images/bg.png" alt=""> 
                 </div>
 
-                <div class="about-content">
+                <div class="about-content" id="about">
                     <h3 class="about-title">ABOUT ME</h3>
                     <h2 class="about-bigtitle">WHO AM I</h2>
                     <div class="about-text">
@@ -215,8 +262,10 @@
                         </p>
                     </div> 
 
-                    <a class="btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
-                    <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
+                    <div class="buttons buttons__center">
+                        <a class="btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
+                        <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
+                    </div>
                 
                 </div> <!-- about-content -->
             </div> <!--about-inner-->
@@ -264,18 +313,18 @@
             </div>
 
             <div class="articles">
-                <div class="articles-col">
+                <div class="articles-col" number="" data-modal="#modal_project-calc">
                     <div class="articles-item">
 
                         <div class="articles-header">
                             <time class="articles-date">18 <br>october</time>   
-                            <a href="#" data-modal="#modal_project-calc">
+                            <a href="#">
                                 <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
                             </a>
                         </div>
                         
                         <div class="articles-content">                      
-                            <h4 class="item-title" data-modal="#modal_project-calc">
+                            <h4 class="item-title">
                                 <a href="">CALCULATOR IN 2022</a>
                             </h4>               
                             <div class="item-category">APP</div>
@@ -286,22 +335,22 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="btn btn--sm" href="" data-modal="#modal_project-calc">READ MORE</a>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
                     </div>
                 </div>
 
-                <div class="articles-col">
+                <div class="articles-col" number="" data-modal="#modal_project-auth">
                     <div class="articles-item">
 
                         <div class="articles-header">
                             <time class="articles-date">12 <br>october</time>   
-                            <a href="#" data-modal="#modal_project-auth">
+                            <a href="#" >
                                 <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
                             </a>
                         </div>
                         
                         <div class="articles-content">                      
-                            <h4 class="item-title" data-modal="#modal_project-auth">
+                            <h4 class="item-title" >
                                 <a href="">AUTH + (DB) IN 2022</a>
                             </h4>               
                             <div class="item-category">INTERACTION</div>
@@ -312,22 +361,22 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="btn btn--sm" href="" data-modal="#modal_project-auth">READ MORE</a>
+                        <a class="btn btn--sm" href="">READ MORE</a>
                     </div>
                 </div>
 
-                <div class="articles-col">
+                <div class="articles-col" number="" data-modal="#modal_project-portf">
                     <div class="articles-item">
 
                         <div class="articles-header">
                             <time class="articles-date">7 <br>october</time>   
-                            <a href="#" data-modal="#modal_project-portf">
+                            <a href="#" >
                                 <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
                             </a>
                         </div>
                         
                         <div class="articles-content">                      
-                            <h4 class="item-title" data-modal="#modal_project-portf">
+                            <h4 class="item-title" >
                                 <a href="">PORTFOLIO IN 2022</a>
                             </h4>               
                             <div class="item-category">WEBSITE</div>
@@ -338,16 +387,175 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="btn btn--sm" href="" data-modal="#modal_project-portf">READ MORE</a>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
                     </div>
                 </div>
                 
             
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">18 <br>october</time>   
+                            <a href="#">
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title">
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">12 <br>october</time>   
+                            <a href="#" >
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title" >
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">7 <br>october</time>   
+                            <a href="#" >
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title" >
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
+
+
+
+                <!-- ------------------------------------------------------------- -->
+
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">18 <br>october</time>   
+                            <a href="#" >
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title" >
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">12 <br>october</time>   
+                            <a href="#" >
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title" >
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles-col hide" data-news="#news_project" number="" data-modal="#modal_project">
+                    <div class="articles-item">
+
+                        <div class="articles-header">
+                            <time class="articles-date">7 <br>october</time>   
+                            <a href="#" >
+                                <img class="articles-photo" src="https://via.placeholder.com/370x257/" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="articles-content">                      
+                            <h4 class="item-title">
+                                <a href="">PROJECT TITLE</a>
+                            </h4>               
+                            <div class="item-category">CATEGORY</div>
+                            <div class="item-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. 
+                                    Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="" >READ MORE</a>
+                    </div>
+                </div>
 
             </div> <!-- articles -->
 
             <div class="news_footer">
-                <a href="#">See more posts</a>
+                <a href="#news" id="see-more">See more posts</a>
             </div>
 
         </div> <!-- container -->
@@ -387,7 +595,6 @@
                     <a class="footer_nav-link" href="#works">Work</a>
                     <a class="footer_nav-link" href="#about">About Me</a>
                     <a class="footer_nav-link" href="#news">Blog</a>
-                    <a class="footer_nav-link" href="#intro">Contact</a>
                     <a class="footer_nav-link footer_nav-link--btn" href="#" data-modal="#modal_hireme">HIRE ME</a>
                 </nav>
 
@@ -408,7 +615,7 @@
 
             <div class="modal-work">
                 <div class="modal-work_preview">
-                    <img class="modal-work_photo" src="https://via.placeholder.com/787x774" alt="">
+                    <!-- <img class="modal-work_photo" src="https://via.placeholder.com/787x774" alt=""> -->
                 </div>
 
                 <div class="modal-work_content">
@@ -458,7 +665,7 @@
 
             <div class="modal-work">
                 <div class="modal-work_preview">
-                    <img class="modal-work_photo" src="images/modal-projects/calculator.jpg" alt="" height="100%" width="auto"> <!-- https://via.placeholder.com/787x774 -->
+                    <img class="modal-work_photo" src="images/modal-projects/calculator.jpg" alt="" height="100%" width="auto">
                 </div>
 
                 <div class="modal-work_content">
@@ -467,6 +674,10 @@
                         <h3 class="modal-work_title">CALCULATOR</h3>
                         <div class="modal-work-info">
                             APP <span>|</span> 2022
+                        </div>
+
+                        <div class="modal-work_preview_mobile">
+                            <img class="modal-work_photo" src="images/modal-projects/calculator.jpg" alt="" height="100%" width="auto">
                         </div>
                     </div>
 
@@ -509,7 +720,7 @@
 
             <div class="modal-work">
                 <div class="modal-work_preview">
-                    <img class="modal-work_photo" src="images/modal-projects/reg.jpg" alt="" style="border-radius: 20px;">
+                    <img class="modal-work_photo" src="images/modal-projects/reg.jpg" alt="">
                 </div>
 
                 <div class="modal-work_content">
@@ -518,6 +729,10 @@
                         <h3 class="modal-work_title">Authorisation</h3>
                         <div class="modal-work-info">
                             INTERACTION <span>|</span> 2022
+                        </div>
+
+                        <div class="modal-work_preview_mobile">
+                            <img class="modal-work_photo" src="images/modal-projects/reg.jpg" alt="">
                         </div>
                     </div>
 
@@ -558,7 +773,7 @@
 
             <div class="modal-work">
                 <div class="modal-work_preview">
-                    <img class="modal-work_photo" src="images/modal-projects/intro.jpg" alt="" style="border-radius: 20px;">
+                    <img class="modal-work_photo" src="images/modal-projects/intro.jpg" alt="">
                 </div>
 
                 <div class="modal-work_content">
@@ -567,6 +782,10 @@
                         <h3 class="modal-work_title">Portfolio</h3>
                         <div class="modal-work-info">
                             WEBSITE <span>|</span> 2022
+                        </div>
+
+                        <div class="modal-work_preview_mobile">
+                            <img class="modal-work_photo" src="images/modal-projects/intro.jpg" alt="">
                         </div>
                     </div>
 
@@ -609,8 +828,8 @@
             <div class="modal_content">
                 <h3 class="modal_title text-center">RESUME</h3>
 
-                <div class="text-center">
-                        <a class="btn btn--thin" href="#">DOWNLOAD PDF</a>
+                <div class="buttons" style="justify-content: center;">
+                        <a class="btn btn--thin" href="/images/Resume.pdf" download>DOWNLOAD PDF</a>
                         <a class="btn btn--thin" href="#">PRINT</a>
                 </div>
 
@@ -734,7 +953,7 @@
                 </div> <!-- timeline -->
 
                 <div class="text-center">
-                    <a href="#" class="btn">HIRE ME</a>
+                    <a href="#" class="btn" id="hire-me">HIRE ME</a>
                 </div>
 
             </div> <!-- modal_content -->
@@ -757,11 +976,15 @@
                 
                     <ul class="contact_info">
                         <li class="contact_info-item">
-                            <img class="contact_info-ico" src="/images/ico/phone.svg" alt="">
-                            +380-67-902-7828
+                                <a href="tel:+380-67-902-7828">
+                                    <img class="contact_info-ico" src="/images/ico/phone.svg" alt="">
+                                </a>
+                                +380-67-902-7828
                         </li>
                         <li class="contact_info-item">
-                            <img class="contact_info-ico" src="/images/ico/message.svg" alt="">
+                            <a href="mailto:maks429121@gmail.com">
+                                <img class="contact_info-ico" src="/images/ico/message.svg" alt="">
+                            </a>
                             maks429121@gmail.com
                         </li>
                     </ul>
@@ -774,15 +997,17 @@
 
                         <div class="form_group">
                             <label for="input-text" class="form_label">Request</label>
-                            <textarea class="form_textarea" name="input-text" id="input-text" placeholder="Type your request..."></textarea>
+                            <textarea class="form_textarea" name="input-text" id="input-text" placeholder="Type your request..." required></textarea>
                         </div>
-                    </form>
 
-                    <div class="text_right">
-                        <button type="submit" class="btn">SEND</button>
-                    </div>
-
+                        <div class="text_right">
+                            <button type="submit" class="btn">SEND</button>
+                        </div>
+                    </form>            
+                
                 </div> <!-- contact_left -->
+
+                <img class="contact__photo" src="https://via.placeholder.com/450x700/" alt="">
             </div> <!-- contact -->
         </div> <!-- modal_dialog -->
     </div> <!-- modal -->

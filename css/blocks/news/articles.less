@@ -1,20 +1,11 @@
 // main: ../../style.less
 
 .articles {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 3rem 3.5rem;
     justify-content: space-between;
-
-    margin: 0 -1.5rem;
-}
-
-.articles-col {
-    max-width: 33.3333%;
-    padding: 0 1.5rem;
-}
-
-.articles-item {
-    margin-bottom: 3.4rem;
 }
 
 .articles-header {
@@ -23,7 +14,7 @@
 }
 
 .articles-content {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .articles-date {
@@ -48,7 +39,7 @@
 
 .articles-photo {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 

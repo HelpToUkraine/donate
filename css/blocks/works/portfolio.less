@@ -1,12 +1,9 @@
 // main: ../../style.less
 
 .portfolio {
-    display: flex;
-    flex-wrap: wrap; 
-    margin: 0 -1.5rem 2.7rem;
-}
-
-.portfolio_col {
-    padding: 1.5rem;
-    flex-basis: 33.333%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2.7rem;
+   
 }

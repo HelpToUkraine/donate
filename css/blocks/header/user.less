@@ -2,14 +2,15 @@
 
 .user {
     display: flex;
+    align-items: center;
 }
 
 .user_avatar {  
-    max-width: 57px;
-    max-height: 57px;
+    width: 5.7rem;
+    height: 5.7rem;
     img {
-        width: 57px;
-        height: 57px;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
     }
 }
@@ -20,8 +21,7 @@
 }
 
 .user_name {
-    margin-bottom: 3px;
-    margin-top: .3rem;
+    margin-bottom: 0.3rem;
      
     font-size: 1.6rem;
     font-weight: 700;
@@ -31,6 +31,7 @@
 }
 
 .user_prof {
+    white-space: nowrap;
     font-size: 1.2rem;
     color: fade(@black, 70%);
 }

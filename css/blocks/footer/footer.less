@@ -28,14 +28,16 @@
 .footer_social {
     display: flex;
     align-items: center;
-
+    column-gap: 1.7rem;
     a {
         text-decoration: none;
-        margin-right: 1.7rem;
+
+        height: 2.1rem;
+        width: 2.1rem;  
 
         img {
-            height: 21px;
-            width: 21px;
+            height: 100%;
+            width: 100%;
         }
     }
 
@@ -44,12 +46,17 @@
 
 .footer_nav {
     display: flex;
+    column-gap: 2rem;
     align-items: center;
     font-size: 1.4rem;
+
+    :first-child {
+        margin-left: 2rem;
+    }
 }
 
 .footer_nav-link {
-    margin-left: 2rem;
+    white-space: nowrap;
 
     color: @gray-white;
     text-decoration: none;
@@ -59,7 +66,7 @@
     }
 
     &--btn {
-        padding: 8px 21px;
+        padding: .8rem 2.1rem;
 
         border: 1px solid @gray-white;
         border-radius: 20px;
