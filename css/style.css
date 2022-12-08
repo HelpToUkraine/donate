@@ -856,11 +856,6 @@ p {
     font-size: 1.6rem;
   }
 }
-@media screen and (max-width: 1024px) {
-  .about-bigtitle {
-    font-size: 8rem;
-  }
-}
 @media screen and (max-width: 768px) {
   html {
     font-size: 9px;
