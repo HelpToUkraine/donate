@@ -182,7 +182,8 @@ $(function() {
     
     function WorkHide() {
         modal.each(function() {
-            if ($(this).data('modal') == '#modal_project') {
+            var modal = $(this).data('modal');
+            if (modal != '#modal_project-fpv' &&  modal != '#modal_project-power' && modal != '#modal_project-mavic') {
                 $(this).addClass('hide')
             }
         });
