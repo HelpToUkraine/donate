@@ -44,10 +44,10 @@ $(function() {
 
         if (category == 'all') {
             $("[data-category]").removeClass('hide');
-            element.textContent = 'SHOW LESS WORK'
+            element.textContent = 'SHOW LESS ITEMS'
         } 
         else {
-            element.textContent = 'SHOW ALL WORK'
+            element.textContent = 'SHOW ALL ITEMS'
             $("[data-category]").each(function() {
                 let temp = $(this).data('category')
 
@@ -65,18 +65,18 @@ $(function() {
     const element = document.getElementById('load')
 
     load.on("click", function() {
-        if (element.textContent == 'SHOW ALL WORK') {
+        if (element.textContent == 'SHOW ALL ITEMS') {
             AllShow();
-            element.textContent = 'SHOW LESS WORK'
+            element.textContent = 'SHOW LESS ITEMS'
         }
-        else if (element.textContent == 'LOAD MORE WORK') {
+        else if (element.textContent == 'LOAD MORE ITEMS') {
             /* WorkShow(); */
             AllShow();
-            element.textContent = 'SHOW LESS WORK'
+            element.textContent = 'SHOW LESS ITEMS'
         }
         else {
             WorkHide();
-            element.textContent = 'LOAD MORE WORK'
+            element.textContent = 'LOAD MORE ITEMS'
         }
     });
 
